@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سوق النخبة | أفضل اختيارات أمازون أمريكا</title>
+<meta name="description" content="متجر تابع لأمازون يعرض أفضل المنتجات المختارة بعناية">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2545;
+    --navy-deep:#071A33;
+    --gold:#C79A3D;
+    --gold-bright:#E0B44C;
+    --paper:#F6F3EC;
+    --ink:#17203A;
+    --line:#E4DFD2;
+    --green:#2F6D5E;
+    --white:#FFFFFF;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+  /* ===== Header ===== */
+  header.site{
+    background:var(--navy);
+    color:var(--white);
+    position:sticky;top:0;z-index:50;
+    border-bottom:3px solid var(--gold);
+  }
+  .top-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;gap:20px;flex-wrap:wrap;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-size:1.7rem;font-weight:900;
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .logo span{
+    color:var(--gold-bright);
+    font-size:0.95rem;
+    font-family:'JetBrains Mono',monospace;
+    font-weight:500;
+    letter-spacing:0.06em;
+  }
+  .search-box{
+    flex:1;min-width:220px;max-width:480px;
+    display:flex;background:var(--white);border-radius:999px;overflow:hidden;
+  }
+  .search-box input{
+    flex:1;border:none;padding:11px 18px;font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;color:var(--ink);
+  }
+  .search-box button{
+    background:var(--gold);border:none;padding:0 20px;cursor:pointer;font-weight:700;color:var(--navy-deep);
+  }
+  nav.tabs{
+    display:flex;gap:6px;overflow-x:auto;padding:0 0 16px;
+    scrollbar-width:none;
+  }
+  nav.tabs::-webkit-scrollbar{display:none;}
+  nav.tabs button{
+    white-space:nowrap;
+    background:transparent;border:1px solid rgba(255,255,255,0.25);
+    color:var(--white);padding:8px 18px;border-radius:999px;
+    cursor:pointer;font-size:0.88rem;font-weight:500;
+    transition:.2s;
+  }
+  nav.tabs button.active,nav.tabs button:hover{
+    background:var(--gold);color:var(--navy-deep);border-color:var(--gold);font-weight:700;
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    background:linear-gradient(180deg,var(--navy) 0%, var(--navy) 55%, var(--paper) 55%);
+    padding:56px 0 0;
+    color:var(--white);
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;padding-bottom:40px;
+  }
+  .hero h1{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.05;}
+  .hero p{margin-top:16px;max-width:44ch;color:#D9E0EC;font-size:1.05rem;}
+  .disclosure-pill{
+    display:inline-block;margin-top:20px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:8px 16px;border-radius:999px;font-size:0.8rem;color:#CBD5E6;
+    font-family:'JetBrains Mono',monospace;
+  }
+  .hero-card{
+    background:var(--white);color:var(--ink);border-radius:var(--radius);
+    padding:22px;box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    position:relative;
+  }
+  .hero-card .tag{
+    position:absolute;top:-12px;left:20px;
+    background:var(--green);color:#fff;font-size:0.72rem;font-weight:700;
+    padding:5px 12px;border-radius:6px;font-family:'JetBrains Mono',monospace;
+  }
+  .hero-card img{border-radius:8px;margin-bottom:14px;aspect-ratio:1/1;object-fit:cover;background:#eee;}
+  .hero-card h3{font-size:1.05rem;margin-bottom:6px;}
+  .price-row{display:flex;align-items:center;gap:10px;margin:10px 0 14px;}
+  .price{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--green);font-size:1.2rem;}
+  .old-price{font-family:'JetBrains Mono',monospace;text-decoration:line-through;color:#999;font-size:0.9rem;}
+
+  /* ===== Section headings ===== */
+  .section{padding:56px 0;}
+  .section-head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    margin-bottom:28px;border-bottom:2px solid var(--line);padding-bottom:14px;
+  }
+  .section-head h2{font-size:1.7rem;}
+  .section-head .count{font-family:'JetBrains Mono',monospace;color:#8A8470;font-size:0.85rem;}
+
+  /* ===== Product Grid ===== */
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;
+  }
+  .card{
+    background:var(--white);border-radius:var(--radius);
+    border:1px solid var(--line);overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:transform .18s ease, box-shadow .18s ease;
+    position:relative;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(11,37,69,0.12);}
+  .card .badge{
+    position:absolute;top:12px;right:12px;z-index:2;
+    background:var(--gold);color:var(--navy-deep);
+    font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:6px;
+    font-family:'JetBrains Mono',monospace;
+  }
+  .card .thumb{
+    aspect-ratio:1/1;background:#EFEAE0;overflow:hidden;
+  }
+  .card .thumb img{width:100%;height:100%;object-fit:cover;}
+  .card-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .card-body .cat{font-size:0.72rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;}
+  .card-body h3{font-size:1rem;font-weight:600;font-family:'Inter',sans-serif;line-height:1.3;min-height:2.6em;}
+  .stars{color:var(--gold);font-size:0.85rem;letter-spacing:2px;}
+  .stars span{color:#999;font-family:'Inter',sans-serif;letter-spacing:normal;font-size:0.78rem;margin-right:4px;}
+  .card-footer{
+    margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:8px;
+  }
+  .buy-btn{
+    background:var(--navy);color:var(--white);
+    padding:10px 16px;border-radius:8px;font-size:0.85rem;font-weight:700;
+    display:flex;align-items:center;gap:6px;white-space:nowrap;
+    transition:background .2s;
+  }
+  .buy-btn:hover{background:var(--gold);color:var(--navy-deep);}
+
+  /* ===== Footer ===== */
+  footer{
+    background:var(--navy-deep);color:#B9C3D6;padding:44px 0 26px;margin-top:40px;
+  }
+  footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:30px;}
+  footer h4{color:var(--white);font-family:'Fraunces',serif;margin-bottom:12px;font-size:1.1rem;}
+  footer p, footer a{font-size:0.88rem;line-height:1.7;color:#B9C3D6;}
+  footer ul{list-style:none;}
+  footer ul li{margin-bottom:8px;}
+  .fine-print{
+    border-top:1px solid rgba(255,255,255,0.12);padding-top:18px;
+    font-size:0.78rem;color:#8A94AC;text-align:center;
+  }
+  .empty{
+    text-align:center;padding:60px 20px;color:#8A8470;font-family:'JetBrains Mono',monospace;
+  }
+
+  @media(max-width:760px){
+    .hero-inner{grid-template-columns:1fr;}
+    footer .cols{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ========================================================
+  طريقة التعديل السريعة (اقرأ هذا قبل النشر):
+  1) غيّري AMAZON_TAG بمعرف الأفلييت الخاص بك (Associate ID).
+  2) عدّلي مصفوفة PRODUCTS بالأسفل: أضيفي/احذفي/عدّلي المنتجات.
+     - كل منتج له: name, category, price, oldPrice, rating, reviews, image, link, badge (اختياري)
+     - إذا تركتِ link فارغًا سيتم توليد رابط بحث أمازون تلقائيًا بالاسم + التاج.
+  3) الصور: ضعي رابط صورة المنتج من أمازون (Product Image URL) بدل الصور المؤقتة.
+========================================================= -->
+
+<header class="site">
+  <div class="wrap top-bar">
+    <div class="logo">سوق النخبة <span>ELITE PICKS · USA</span></div>
+    <form class="search-box" onsubmit="return false;">
+      <input id="searchInput" type="text" placeholder="ابحث عن منتج...">
+      <button onclick="filterProducts()">بحث</button>
+    </form>
+  </div>
+  <div class="wrap">
+    <nav class="tabs" id="tabsNav"></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <h1>أفضل المنتجات على أمازون،<br>مختارة بعناية.</h1>
+      <p>نقارن، نجرّب، ونرشّح لك المنتجات الأعلى تقييمًا في كل فئة — لتوفري وقتك وتشتري بثقة.</p>
+      <div class="disclosure-pill">🔗 كشركاء أمازون (Amazon Associate)، نحصل على عمولة من عمليات الشراء المؤهلة</div>
+    </div>
+    <div class="hero-card" id="featuredCard"></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="section" id="productsSection">
+    <div class="section-head">
+      <h2 id="sectionTitle">كل المنتجات</h2>
+      <span class="count mono" id="resultCount"></span>
+    </div>
+    <div class="grid" id="productGrid"></div>
+    <div class="empty" id="emptyState" style="display:none;">لا توجد نتائج مطابقة.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>سوق النخبة</h4>
+        <p>متجر رقمي متخصص في ترشيح أفضل المنتجات المتوفرة على أمازون أمريكا لمساعدتك على اتخاذ قرار شراء أفضل.</p>
+      </div>
+      <div>
+        <h4>روابط</h4>
+        <ul>
+          <li><a href="#">من نحن</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>الفئات</h4>
+        <ul id="footerCats"></ul>
+      </div>
+    </div>
+    <div class="fine-print">
+      كشريك في برنامج Amazon Associates، هذا الموقع يحصل على عمولة عن عمليات الشراء المؤهلة. الأسعار والتوفر عرضة للتغيير على موقع أمازون.
+      <br>© 2026 سوق النخبة — جميع الحقوق محفوظة.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   1) ضعي معرف الأفلييت الخاص بك هنا (بدون "-20" إذا كان مضمّنًا)
+   ========================================================= */
+const AMAZON_TAG = "yourtag-20"; // ⚠️ غيّري هذا لمعرفك الحقيقي من Amazon Associates
+
+/* =========================================================
+   2) أضيفي منتجاتك هنا. انسخي/الصقي أي بلوك وعدّلي القيم.
+   ========================================================= */
+const PRODUCTS = [
+  {
+    name: "سماعات لاسلكية إلغاء ضوضاء",
+    category: "إلكترونيات",
+    price: "89.99",
+    oldPrice: "129.99",
+    rating: 4.6,
+    reviews: 12500,
+    image: "https://placehold.co/400x400/EFEAE0/0B2545?text=Product+Image",
+    link: "", // اتركيه فارغًا ليُبنى تلقائيًا، أو ضعي رابط منتج أمازون كامل
+    badge: "الأكثر مبيعًا"
+  },
+  {
+    name: "خلاط كهربائي متعدد السرعات",
+    category: "المنزل والمطبخ",
+    price: "45.50",
+    oldPrice: "",
+    rating: 4.4,
+    reviews: 3200,
+    image: "https://placehold.co/400x400/EFEAE0/0B2545?text=Product+Image",
+    link: "",
+    badge: ""
+  },
+  {
+    name: "ساعة ذكية بشاشة AMOLED",
+    category: "إلكترونيات",
+    price: "129.00",
+    oldPrice: "159.00",
+    rating: 4.7,
+    reviews: 8900,
+    image: "https://placehold.co/400x400/EFEAE0/0B2545?text=Product+Image",
+    link: "",
+    badge: "عرض محدود"
+  },
+  {
+    name: "حقيبة ظهر مقاومة للماء",
+    category: "أزياء وحقائب",
+    price: "34.99",
+    oldPrice: "",
+    rating: 4.5,
+    reviews: 5400,
+    image: "https://placehold.co/400x400/EFEAE0/0B2545?text=Product+Image",
+    link: "",
+    badge: ""
+  },
+  {
+    name: "جهاز تنقية هواء منزلي",
+    category: "المنزل والمطبخ",
+    price: "79.99",
+    oldPrice: "99.99",
+    rating: 4.3,
+    reviews: 2100,
+    image: "https://placehold.co/400x400/EFEAE0/0B2545?text=Product+Image",
+    link: "",
+    badge: ""
+  },
+  {
+    name: "لوحة مفاتيح ميكانيكية للألعاب",
+    category: "إلكترونيات",
+    price: "59.90",
+    oldPrice: "",
+    rating: 4.8,
+    reviews: 6700,
+    image: "https://placehold.co/400x400/EFEAE0/0B2545?text=Product+Image",
+    link: "",
+    badge: "تقييم ممتاز"
+  }
+];
+
+/* ========================================================= */
+
+function buildLink(p){
+  if(p.link && p.link.trim() !== "") return p.link;
+  const q = encodeURIComponent(p.name);
+  return `https://www.amazon.com/s?k=${q}&tag=${AMAZON_TAG}`;
+}
+
+function starString(rating){
+  const full = Math.round(rating);
+  return "★".repeat(full) + "☆".repeat(5-full);
+}
+
+let activeCategory = "الكل";
+
+function getCategories(){
+  const cats = ["الكل", ...new Set(PRODUCTS.map(p=>p.category))];
+  return cats;
+}
+
+function renderTabs(){
+  const nav = document.getElementById("tabsNav");
+  const footerCats = document.getElementById("footerCats");
+  nav.innerHTML = "";
+  footerCats.innerHTML = "";
+  getCategories().forEach(cat=>{
+    const btn = document.createElement("button");
+    btn.textContent = cat;
+    if(cat === activeCategory) btn.classList.add("active");
+    btn.onclick = ()=>{ activeCategory = cat; document.getElementById("searchInput").value=""; renderTabs(); filterProducts(); };
+    nav.appendChild(btn);
+
+    if(cat !== "الكل"){
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href="#"; a.textContent = cat;
+      a.onclick = (e)=>{ e.preventDefault(); activeCategory = cat; renderTabs(); filterProducts(); window.scrollTo({top:0,behavior:'smooth'}); };
+      li.appendChild(a);
+      footerCats.appendChild(li);
+    }
+  });
+}
+
+function renderCard(p){
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    ${p.badge ? `<div class="badge">${p.badge}</div>` : ""}
+    <div class="thumb"><img src="${p.image}" alt="${p.name}" loading="lazy"></div>
+    <div class="card-body">
+      <span class="cat">${p.category}</span>
+      <h3>${p.name}</h3>
+      <div class="stars">${starString(p.rating)} <span>(${p.reviews.toLocaleString()})</span></div>
+      <div class="price-row">
+        <span class="price mono">$${p.price}</span>
+        ${p.oldPrice ? `<span class="old-price mono">$${p.oldPrice}</span>` : ""}
+      </div>
+      <div class="card-footer">
+        <a class="buy-btn" href="${buildLink(p)}" target="_blank" rel="nofollow sponsored noopener">شراء على أمازون ↗</a>
+      </div>
+    </div>
+  `;
+  return card;
+}
+
+function filterProducts(){
+  const query = document.getElementById("searchInput").value.trim().toLowerCase();
+  const grid = document.getElementById("productGrid");
+  const empty = document.getElementById("emptyState");
+  grid.innerHTML = "";
+
+  let list = PRODUCTS.filter(p=>{
+    const matchCat = activeCategory === "الكل" || p.category === activeCategory;
+    const matchQuery = !query || p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query);
+    return matchCat && matchQuery;
+  });
+
+  document.getElementById("sectionTitle").textContent = activeCategory === "الكل" ? "كل المنتجات" : activeCategory;
+  document.getElementById("resultCount").textContent = `${list.length} منتج`;
+
+  if(list.length === 0){
+    empty.style.display = "block";
+  } else {
+    empty.style.display = "none";
+    list.forEach(p=>grid.appendChild(renderCard(p)));
+  }
+}
+
+function renderFeatured(){
+  const featured = PRODUCTS.reduce((a,b)=> (b.reviews > a.reviews ? b : a), PRODUCTS[0]);
+  const el = document.getElementById("featuredCard");
+  el.innerHTML = `
+    <div class="tag">منتج الأسبوع</div>
+    <img src="${featured.image}" alt="${featured.name}">
+    <h3>${featured.name}</h3>
+    <div class="stars">${starString(featured.rating)} <span>(${featured.reviews.toLocaleString()})</span></div>
+    <div class="price-row">
+      <span class="price mono">$${featured.price}</span>
+      ${featured.oldPrice ? `<span class="old-price mono">$${featured.oldPrice}</span>` : ""}
+    </div>
+    <a class="buy-btn" style="width:100%;justify-content:center;" href="${buildLink(featured)}" target="_blank" rel="nofollow sponsored noopener">شراء الآن ↗</a>
+  `;
+}
+
+document.getElementById("searchInput").addEventListener("input", filterProducts);
+
+renderTabs();
+renderFeatured();
+filterProducts();
+</script>
+
+</body>
+</html>
