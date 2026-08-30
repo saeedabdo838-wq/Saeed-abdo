@@ -1,115 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Saeed Tech Picks - curated tech products and Amazon affiliate recommendations.">
-<title>Saeed Tech Picks | Smart Tech Picks</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Saeed Tech Picks - technology recommendations and Amazon affiliate links."><title>Saeed Tech Picks</title>
 <style>
-:root{--bg:#f6f7fb;--card:#fff;--text:#172033;--muted:#687386;--accent:#ff9900;--dark:#111827;--line:#e7eaf0}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}.container{max-width:1120px;margin:auto;padding:0 18px}
-header{background:var(--dark);color:white;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #0002}
-.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font-size:22px;font-weight:800}.logo span{color:var(--accent)}
-nav{display:flex;gap:18px;font-size:14px}nav a{color:#e5e7eb}nav a:hover{color:white}
-.hero{background:linear-gradient(135deg,#111827,#243047);color:white;padding:70px 0}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}.hero h1{font-size:48px;line-height:1.05;margin:0 0 18px}.hero p{color:#d5d9e2;font-size:18px;line-height:1.6}.hero-card{background:#ffffff12;border:1px solid #ffffff20;border-radius:22px;padding:28px;text-align:center}.hero-card .emoji{font-size:90px}.btn{display:inline-block;background:var(--accent);color:#111;font-weight:800;padding:13px 18px;border-radius:10px;border:0;cursor:pointer}.btn:hover{filter:brightness(.95)}
-section{padding:52px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;gap:15px}.section-head h2{margin:0;font-size:30px}.section-head p{margin:7px 0 0;color:var(--muted)}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;font-weight:700}.category div{font-size:34px;margin-bottom:8px}
-.controls{display:flex;gap:12px;margin-bottom:22px;flex-wrap:wrap}.search{flex:1;min-width:220px;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font-size:15px}.filter{padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:white}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}.product-img{height:180px;background:#eef1f6;display:flex;align-items:center;justify-content:center;font-size:70px}.product-body{padding:18px;display:flex;flex-direction:column;flex:1}.tag{font-size:11px;font-weight:800;color:#a45c00;background:#fff1d8;border-radius:20px;padding:5px 9px;display:inline-block;align-self:flex-start}.product h3{font-size:17px;margin:12px 0 7px}.product p{font-size:13px;color:var(--muted);line-height:1.5;flex:1;margin:0 0 15px}.rating{font-size:13px;margin-bottom:14px}
-.notice{background:#fff8e8;border:1px solid #f3d99d;border-radius:14px;padding:18px;color:#5d4a22;line-height:1.6}
-footer{background:#111827;color:#cbd5e1;padding:35px 0;margin-top:20px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer-title{color:white;font-weight:800;margin-bottom:10px}.small{font-size:13px;line-height:1.6}
-@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:38px}.products{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}nav{display:none}.footer-grid{grid-template-columns:1fr}}
-@media(max-width:520px){.products{grid-template-columns:1fr}.hero{padding:50px 0}.hero-card{display:none}.section-head{display:block}.categories{grid-template-columns:1fr 1fr}}
-</style>
-</head>
-<body>
-<header>
-<div class="container nav">
-<a class="logo" href="#">Saeed <span>Tech Picks</span></a>
-<nav><a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a></nav>
-</div>
-</header>
-
-<main id="home">
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<p style="font-weight:800;color:#ffb52e;margin:0 0 10px">SMART TECH • SIMPLE CHOICES</p>
-<h1>Find useful tech without the guesswork.</h1>
-<p>Curated electronics, accessories and everyday tech picks. Compare products and check the latest Amazon price.</p>
-<a class="btn" href="#products">Explore Products</a>
-</div>
-<div class="hero-card"><div class="emoji">🎧📱💻</div><h3>Our Top Tech Picks</h3><p class="small">Product links will be replaced with your Amazon Associates links.</p></div>
-</div>
-</section>
-
-<section id="categories">
-<div class="container">
-<div class="section-head"><div><h2>Shop by Category</h2><p>Start with the type of tech you need.</p></div></div>
-<div class="categories">
-<a class="category" href="#products" onclick="setCategory('Audio')"><div>🎧</div>Audio</a>
-<a class="category" href="#products" onclick="setCategory('Accessories')"><div>🔌</div>Accessories</a>
-<a class="category" href="#products" onclick="setCategory('Smart Tech')"><div>⌚</div>Smart Tech</a>
-<a class="category" href="#products" onclick="setCategory('Computer')"><div>💻</div>Computer</a>
-</div>
-</div>
-</section>
-
-<section id="products">
-<div class="container">
-<div class="section-head"><div><h2>Featured Products</h2><p>Demo products are included. Replace their links with your own affiliate links.</p></div></div>
-<div class="controls">
-<input class="search" id="search" type="search" placeholder="Search products..." oninput="renderProducts()">
-<select class="filter" id="filter" onchange="renderProducts()">
-<option value="All">All categories</option><option>Audio</option><option>Accessories</option><option>Smart Tech</option><option>Computer</option>
-</select>
-</div>
-<div class="products" id="productGrid"></div>
-</div>
-</section>
-
-<section id="about">
-<div class="container">
-<div class="notice">
-<strong>Affiliate Disclosure:</strong> This website participates in affiliate marketing. When you click an eligible product link and make a purchase, we may earn a commission at no additional cost to you. Product availability and prices are determined by Amazon and can change.
-</div>
-</div>
-</section>
-</main>
-
-<footer>
-<div class="container footer-grid">
-<div><div class="footer-title">Saeed Tech Picks</div><div class="small">A simple tech recommendation site. Add your real Amazon Associates links before promoting the website.</div></div>
-<div><div class="footer-title">Quick Links</div><div class="small"><a href="#home">Home</a><br><a href="#products">Products</a><br><a href="#about">Affiliate Disclosure</a></div></div>
-<div><div class="footer-title">Contact</div><div class="small">Add your contact email or social links here.</div></div>
-</div>
-</footer>
-
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}:root{--navy:#111827;--orange:#ff9900;--muted:#697386;--line:#e5e9f0}
+.container{max-width:1160px;margin:auto;padding:0 18px}header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 18px #0002}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:21px;color:#fff;text-decoration:none}.logo span{color:var(--orange)}nav{display:flex;gap:20px;font-size:14px}nav a{color:#dbe2ee;text-decoration:none}
+.hero{background:linear-gradient(135deg,#111827,#263653);color:#fff;padding:68px 0}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}.eyebrow{color:#ffb629;font-weight:800;font-size:13px}.hero h1{font-size:50px;line-height:1.04;margin:12px 0 18px}.hero p{font-size:18px;line-height:1.65;color:#d6ddea}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;border:0;border-radius:10px;padding:13px 18px;font-weight:800;cursor:pointer;background:var(--orange);color:#111;text-decoration:none}.btn.white{background:#fff}.hero-art{background:#ffffff10;border:1px solid #ffffff22;border-radius:24px;padding:28px;text-align:center}.icons{font-size:78px}
+section{padding:54px 0}.heading{margin-bottom:24px}.heading h2{margin:0;font-size:30px}.heading p{color:var(--muted);margin:8px 0}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.cat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;cursor:pointer}.cat .i{font-size:38px}.cat strong{display:block;margin-top:8px}
+.controls{display:flex;gap:12px;margin-bottom:22px}.search,.select{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 14px;font-size:15px}.search{flex:1}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 3px 12px #00000006}.pic{height:165px;background:linear-gradient(135deg,#eef2f7,#e5eaf2);display:flex;align-items:center;justify-content:center;font-size:70px}.body{padding:17px;display:flex;flex-direction:column;flex:1}.pill{display:inline-block;background:#fff1d8;color:#8a5400;border-radius:20px;padding:5px 9px;font-size:11px;font-weight:800;align-self:flex-start}.card h3{font-size:17px;margin:11px 0 7px}.rating{font-size:13px;margin-bottom:10px}.desc{font-size:13px;line-height:1.55;color:var(--muted);flex:1;margin:0 0 15px}.full{text-align:center;width:100%}.placeholder{background:#eef1f5;color:#687386;cursor:not-allowed}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}.info h3{margin-top:0}.notice{background:#fff8e6;border:1px solid #f0d38c;border-radius:15px;padding:20px;line-height:1.65;color:#5b4b27;margin-top:20px}
+footer{background:#111827;color:#cbd5e1;padding:38px 0}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.foot h3{color:#fff}.small{font-size:13px;line-height:1.7}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.hero-grid,.about{grid-template-columns:1fr}}@media(max-width:550px){nav{display:none}.hero h1{font-size:38px}.grid{grid-template-columns:1fr}.controls{flex-direction:column}}
+</style></head><body>
+<header><div class="container nav"><a class="logo" href="#home">Saeed <span>Tech Picks</span></a><nav><a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a></nav></div></header>
+<main id="home"><section class="hero"><div class="container hero-grid"><div><div class="eyebrow">SMART TECH • SIMPLE CHOICES</div><h1>Discover tech worth checking out.</h1><p>Curated gadgets and everyday technology picks, organized to make shopping research easier.</p><div class="actions"><a class="btn" href="#products">Explore Products</a><a class="btn white" href="#categories">Browse Categories</a></div></div><div class="hero-art"><div class="icons">🎧 📱 💻</div><h3>Featured Tech</h3><p>Compare picks and check Amazon for current availability and pricing.</p></div></div></section>
+<section id="categories"><div class="container"><div class="heading"><h2>Shop by Category</h2><p>Choose a category to filter the products.</p></div><div class="categories"><div class="cat" onclick="setCat('Audio')"><div class="i">🎧</div><strong>Audio</strong></div><div class="cat" onclick="setCat('Accessories')"><div class="i">🔌</div><strong>Accessories</strong></div><div class="cat" onclick="setCat('Smart Tech')"><div class="i">⌚</div><strong>Smart Tech</strong></div><div class="cat" onclick="setCat('Computer')"><div class="i">💻</div><strong>Computer</strong></div></div></div></section>
+<section id="products"><div class="container"><div class="heading"><h2>Featured Products</h2><p>Search and filter the store.</p></div><div class="controls"><input id="search" class="search" placeholder="Search products..." oninput="render()"><select id="filter" class="select" onchange="render()"><option>All</option><option>Audio</option><option>Accessories</option><option>Smart Tech</option><option>Computer</option></select></div><div id="grid" class="grid"></div></div></section>
+<section id="about"><div class="container"><div class="about"><div class="info"><h3>About Saeed Tech Picks</h3><p>Useful technology ideas in one simple place, with links that let visitors continue to Amazon for product details.</p></div><div class="info"><h3>Affiliate Disclosure</h3><p>As an Amazon Associate, we may earn from qualifying purchases. Prices and availability can change; always check Amazon for the latest information.</p></div></div></div></section></main>
+<footer><div class="container foot"><div><h3>Saeed Tech Picks</h3><div class="small">Independent technology recommendations and shopping resources.</div></div><div><h3>Links</h3><div class="small"><a href="#home">Home</a><br><a href="#products">Products</a><br><a href="#about">Disclosure</a></div></div><div><h3>Contact</h3><div class="small">Add your email or social links here.</div></div></div></footer>
 <script>
+const A="https://amzn.to/4ceOQTc";
 const products=[
-{name:"SanDisk 256GB Ultra Dual Drive USB Type-C",cat:"Accessories",icon:"💾",rating:"★★★★★",desc:"256GB USB flash drive with USB Type-C connectivity for compatible devices.",url:"https://amzn.to/4ceOQTc"},
-{name:"USB-C Fast Charger",cat:"Accessories",icon:"🔌",rating:"★★★★★",desc:"Compact charger for compatible phones, tablets and other devices.",url:"#"},
-{name:"Smart Watch",cat:"Smart Tech",icon:"⌚",rating:"★★★★☆",desc:"Everyday smart watch concept with health, notifications and fitness features.",url:"#"},
-{name:"Bluetooth Speaker",cat:"Audio",icon:"🔊",rating:"★★★★☆",desc:"Portable speaker pick for music at home, work or outdoors.",url:"#"},
-{name:"Laptop Stand",cat:"Computer",icon:"💻",rating:"★★★★★",desc:"Adjustable stand designed to improve desk setup and screen height.",url:"#"},
-{name:"Power Bank",cat:"Accessories",icon:"🔋",rating:"★★★★☆",desc:"Portable power solution for charging compatible mobile devices.",url:"#"},
-{name:"Wireless Mouse",cat:"Computer",icon:"🖱️",rating:"★★★★☆",desc:"Simple wireless mouse for work, study and everyday computer use.",url:"#"},
-{name:"Phone Holder",cat:"Accessories",icon:"📱",rating:"★★★★★",desc:"Practical phone holder for desks, videos, calls and navigation.",url:"#"}
+{name:"SanDisk 256GB Ultra Dual Drive USB Type-C",cat:"Accessories",icon:"💾",rating:"★★★★★",desc:"256GB USB flash drive with USB Type-C connectivity.",url:A,live:true},
+{name:"Wireless Headphones",cat:"Audio",icon:"🎧",rating:"★★★★★",desc:"Add your Amazon affiliate link for a headphone recommendation.",url:"#",live:false},
+{name:"Bluetooth Speaker",cat:"Audio",icon:"🔊",rating:"★★★★☆",desc:"Add your Amazon affiliate link for a speaker recommendation.",url:"#",live:false},
+{name:"USB-C Fast Charger",cat:"Accessories",icon:"🔌",rating:"★★★★★",desc:"Add your Amazon affiliate link for a charger recommendation.",url:"#",live:false},
+{name:"Power Bank",cat:"Accessories",icon:"🔋",rating:"★★★★☆",desc:"Add your Amazon affiliate link for a power bank recommendation.",url:"#",live:false},
+{name:"Phone Holder",cat:"Accessories",icon:"📱",rating:"★★★★★",desc:"Add your Amazon affiliate link for a phone holder recommendation.",url:"#",live:false},
+{name:"Smart Watch",cat:"Smart Tech",icon:"⌚",rating:"★★★★☆",desc:"Add your Amazon affiliate link for a smart watch recommendation.",url:"#",live:false},
+{name:"Wireless Mouse",cat:"Computer",icon:"🖱️",rating:"★★★★☆",desc:"Add your Amazon affiliate link for a mouse recommendation.",url:"#",live:false},
+{name:"Laptop Stand",cat:"Computer",icon:"💻",rating:"★★★★★",desc:"Add your Amazon affiliate link for a laptop stand recommendation.",url:"#",live:false},
+{name:"USB-C Hub",cat:"Computer",icon:"🔗",rating:"★★★★☆",desc:"Add your Amazon affiliate link for a USB-C hub recommendation.",url:"#",live:false}
 ];
-function renderProducts(){
- const q=document.getElementById("search").value.toLowerCase();
- const c=document.getElementById("filter").value;
- const list=products.filter(p=>(c==="All"||p.cat===c)&&((p.name+" "+p.desc).toLowerCase().includes(q)));
- document.getElementById("productGrid").innerHTML=list.map(p=>`
- <article class="product"><div class="product-img">${p.icon}</div><div class="product-body">
- <span class="tag">${p.cat}</span><h3>${p.name}</h3><div class="rating">${p.rating}</div><p>${p.desc}</p>
- <a class="btn" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">Check Price on Amazon</a>
- </div></article>`).join("")||"<p>No products found.</p>";
-}
-function setCategory(c){document.getElementById("filter").value=c;renderProducts()}
-renderProducts();
-</script>
-</body>
-</html>
+function render(){const q=document.getElementById("search").value.toLowerCase(),c=document.getElementById("filter").value;const list=products.filter(p=>(c==="All"||p.cat===c)&&(p.name+" "+p.desc).toLowerCase().includes(q));document.getElementById("grid").innerHTML=list.map(p=>`<article class="card"><div class="pic">${p.icon}</div><div class="body"><span class="pill">${p.cat}</span><h3>${p.name}</h3><div class="rating">${p.rating}</div><p class="desc">${p.desc}</p>${p.live?`<a class="btn full" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">Check Price on Amazon</a>`:`<span class="btn full placeholder">Affiliate Link Coming Soon</span>`}</div></article>`).join("")||"<p>No products found.</p>"}function setCat(c){document.getElementById("filter").value=c;document.getElementById("products").scrollIntoView();render()}render();
+</script></body></html>
